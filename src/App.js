@@ -1,6 +1,7 @@
-// import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
+import Chat from './components/Chat';
+
 
 import {
   BrowserRouter as Router,
@@ -9,19 +10,21 @@ import {
 } from 'react-router-dom';
 
 function App() {
-  return (
-   <>
-      <Router>
-        <div className="App">
+ 
 
-          <Routes>
-            <Route key="Home" path='/' exact element={<Home></Home>} />
-            
-            <Route></Route>
-          </Routes>
-        </div>
-      </Router>
-    </>
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <ProtectedRoute> */}
+          
+          <Route path="/chat" element={<Chat />} />
+
+          {/* </ProtectedRoute> */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

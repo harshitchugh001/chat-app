@@ -40,7 +40,7 @@ const Login = ({ closeModal }) => {
           });
           toast.success(`Hey ${response.data.user.name}, Welcome back!`);
           isAuth()
-            ? navigate('/userpost')
+            ? navigate('/chat')
             : navigate('/');
         });
       })
